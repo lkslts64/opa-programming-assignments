@@ -347,12 +347,9 @@ def unflatten(ls):
     ['No', ['more', ['cherries', ['please!', None]]]]
     """
     """GRAPSTE TON KWDIKA SAS APO KATW."""
-    if ls is []:
-        return
-    res = [ls[0],None]
-    _res = res 
-    for i in range(1,len(ls)):
-        _res[1] = [ls[i],None]
-        _res = _res[1]
-    return res
+    l = None
+    ls.reverse()
+    for s in ls:
+        l = [s,l]
+    return l     
 
